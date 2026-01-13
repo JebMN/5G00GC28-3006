@@ -1,0 +1,131 @@
+:root {
+  --green: #2e7d32;
+  --light: #f5f5f5;
+  --accent: #81c784;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--dark);
+}
+
+
+/* Navigation */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  background: var(--green);
+  color: white;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: white;
+
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+    url("images/pic.jpg");
+
+  background-size: cover;
+  background-position: center;
+}
+.hero h2 {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.hero p {
+  max-width: 500px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1.5rem;
+  background: var(--accent);
+  color: black;
+  text-decoration: none;
+  border-radius: 20px;
+}
+
+/* Services */
+.services {
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.service-cards {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.card {
+  background: white;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+/* Contact */
+.contact {
+  padding: 1rem;
+  background: white;
+  justify-content: center;
+}
+.contact h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+form {
+  max-width: 400px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+input,
+textarea {
+  padding: 0.5rem;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #ddd;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service-cards {
+    flex-direction: column;
+  }
+}
