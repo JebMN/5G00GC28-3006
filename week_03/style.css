@@ -1,0 +1,19 @@
+#container {
+    display: flex;
+}
+
+#list {
+    width: 30%;
+    border-right: 1px solid #ccc
+}
+
+#details {
+    width: 70%;
+    padding: 20px;
+}
+
+#detail-image {
+    width: 300px;
+    height: auto;
+    object-fit: cover;
+}
