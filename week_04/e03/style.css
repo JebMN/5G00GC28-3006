@@ -1,0 +1,77 @@
+.navbar {
+    background-color: purple !important;
+}
+
+.navbar-brand {
+    color: white !important;
+    font-size: 24px;
+}
+
+.nav-link {
+    color: white !important;
+}
+.nav-link:hover {
+    color: yellow !important;
+    background-color: blue;
+    padding: 5px;
+}
+.btn-primary {
+    background-color: red !important;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: darkred !important;
+}
+
+.btn-secondary {
+    background-color: orange !important;
+}
+
+.btn-secondary:hover {
+    background-color: darkorange !important;
+}
+
+.btn-success {
+    background-color: pink !important;
+    color: black;
+}
+
+.btn-success:hover {
+    background-color: hotpink !important;
+}
+.mybtn1 {
+    background-color: green;
+    color: white;
+    padding: 10px 20px;
+}
+
+.mybtn1:hover {
+    background-color: lightgreen;
+    color: black;
+    font-weight: bold;
+}
+
+.mybtn2 {
+    background-color: blue;
+    color: white;
+    padding: 10px 20px;
+}
+
+.mybtn2:hover {
+    background-color: lightblue;
+    transform: scale(1.1);
+}
+.form-control {
+    border: 2px solid green;
+    width: 300px;
+}
+
+.form-control:focus {
+    border: 2px solid red;
+    background-color: lightyellow;
+}
+footer {
+    background-color: #333;
+    color: white;
+}

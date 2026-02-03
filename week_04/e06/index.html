@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercise 6 - Tooltips & Popovers</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <div class="container">
+        <h1>Tooltips and Popovers</h1>
+        <p class="lead text-center mb-4">Learn Bootstrap tooltips (hover) and popovers (click)</p>
+        <div class="section">
+            <h3>Tooltips (Hover to see)</h3>
+            <p>Tooltips appear when you hover over an element. They show small help text.</p>
+            
+            <div class="demo-area">
+                <button type="button" class="btn btn-primary" 
+                        data-bs-toggle="tooltip" 
+                        data-bs-placement="top"
+                        title="This is a tooltip on top!">
+                    Hover Me (Top)
+                </button>
+                
+                <button type="button" class="btn btn-success" 
+                        data-bs-toggle="tooltip" 
+                        data-bs-placement="right"
+                        title="Tooltip on the right side">
+                    Hover Me (Right)
+                </button>
+                
+                <button type="button" class="btn btn-warning" 
+                        data-bs-toggle="tooltip" 
+                        data-bs-placement="bottom"
+                        title="Tooltip on the bottom">
+                    Hover Me (Bottom)
+                </button>
+                
+                <button type="button" class="btn btn-danger" 
+                        data-bs-toggle="tooltip" 
+                        data-bs-placement="left"
+                        title="Tooltip on the left side">
+                    Hover Me (Left)
+                </button>
+                <a href="#" class="btn btn-link"
+                   data-bs-toggle="tooltip"
+                   title="This is a link with a tooltip">
+                    🔗 Link with Tooltip
+                </a>
+            </div>
+            
+            <div class="example-box">
+                <h5>How it works:</h5>
+                <p>Add these attributes to any element:</p>
+                <code>data-bs-toggle="tooltip" title="Your text here"</code>
+                <p class="mt-2">Plus JavaScript initialization (see bottom of page).</p>
+            </div>
+        </div>
+        <div class="section">
+            <h3>Popovers (Click to see)</h3>
+            <p>Popovers appear when you click an element. They can contain more content than tooltips.</p>
+            
+            <div class="demo-area">
+                <button type="button" class="btn btn-info" 
+                        data-bs-toggle="popover" 
+                        data-bs-placement="top"
+                        data-bs-title="Popover Title"
+                        data-bs-content="This is the content of the popover. It can have <strong>HTML</strong> too!">
+                    Click Me (Top Popover)
+                </button>
+                
+                <button type="button" class="btn btn-secondary" 
+                        data-bs-toggle="popover" 
+                        data-bs-placement="right"
+                        data-bs-title="User Info"
+                        data-bs-content="Name: John Doe<br>Email: john@example.com<br>Status: Active">
+                    Click Me (Right - User Info)
+                </button>
+                
+                <button type="button" class="btn btn-dark" 
+                        data-bs-toggle="popover" 
+                        data-bs-placement="bottom"
+                        data-bs-title="Instructions"
+                        data-bs-content="1. Fill the form<br>2. Click submit<br>3. Check your email">
+                    Click Me (Bottom - Instructions)
+                </button>
+                <button type="button" class="btn btn-outline-primary" 
+                        data-bs-toggle="popover" 
+                        data-bs-trigger="focus"
+                        data-bs-title="Click Away to Close"
+                        data-bs-content="This popover closes when you click outside of it.">
+                    Click Me (Dismissible)
+                </button>
+            </div>
+            
+            <div class="example-box">
+                <h5>Popover features:</h5>
+                <ul>
+                    <li>Has a <strong>title</strong> and <strong>content</strong></li>
+                    <li>Can contain HTML</li>
+                    <li>Can be positioned (top, right, bottom, left)</li>
+                    <li>Use <code>data-bs-trigger="focus"</code> to close when clicking elsewhere</li>
+                </ul>
+            </div>
+        </div>
+        <div class="section">
+            <h3>Real Example</h3>
+            <p>Here's a form field with both tooltip and popover help:</p>
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <label class="form-label">
+                        Password
+                        <span class="text-primary" 
+                              data-bs-toggle="tooltip" 
+                              title="Must be at least 8 characters">
+                            [?]
+                        </span>
+                    </label>
+                    <input type="password" class="form-control" placeholder="Enter password">
+                    <small class="form-text text-muted">
+                        <a href="#" 
+                           data-bs-toggle="popover" 
+                           data-bs-title="Password Requirements"
+                           data-bs-content="• 8+ characters<br>• 1 uppercase letter<br>• 1 number<br>• 1 special character">
+                            View password requirements
+                        </a>
+                    </small>
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label">
+                        Email
+                        <span class="text-primary" 
+                              data-bs-toggle="tooltip" 
+                              title="We'll send a confirmation email">
+                            [?]
+                        </span>
+                    </label>
+                    <input type="email" class="form-control" placeholder="Enter email">
+                </div>
+            </div>
+        </div>
+            <div class="alert alert-info mt-4">
+            <h5>Cool note:</h5>
+            <p>Tooltips and popovers <strong>require JavaScript initialization</strong>. 
+            Just adding the HTML attributes is not enough!</p>
+            <p>Check the JavaScript code at the bottom of this page to see how to initialize them.</p>
+        </div>
+        
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <div class="container mt-3 text-center">
+        <button class="btn btn-outline-secondary" onclick="showDemoAlert()">
+            Regular Button (No Tooltip/Popover)
+        </button>
+        <button class="btn btn-outline-info" onclick="showCodeExample()">
+            Show/Hide Code Example
+        </button>
+        
+        <div id="codeExample" style="display: none; margin-top: 20px; text-align: left;">
+            <pre><code>&lt;!-- Tooltip Example --&gt;
+&lt;button data-bs-toggle="tooltip" 
+        title="Help text here"&gt;
+    Hover Me
+&lt;/button&gt;
+
+&lt;!-- Popover Example --&gt;
+&lt;button data-bs-toggle="popover"
+        data-bs-title="Title"
+        data-bs-content="Content"&gt;
+    Click Me
+&lt;/button&gt;</code></pre>
+        </div>
+    </div>
+    <script src="myscript.js"></script>
+</body>
+</html>

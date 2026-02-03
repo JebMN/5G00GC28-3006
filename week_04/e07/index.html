@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercise 7 - Utility Classes</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { background-color: #f8f9fa; }
+        .custom-bg { background-color: #e9ecef; }
+    </style>
+</head>
+<body class="p-4">
+
+    <div class="container border rounded shadow p-4 mt-3 mb-5 bg-white">        
+        <header class="text-center mb-5 p-3 border-bottom">
+            <h1 class="display-4 text-primary fw-bold">Utility Classes Demo</h1>
+            <p class="lead text-muted">Using Bootstrap utilities instead of custom CSS</p>
+        </header>
+        <div class="row mb-4">
+            <div class="col">
+                <h3 class="text-success mb-3"> Spacing Utilities</h3>
+                <div class="p-3 border rounded">
+                    <div class="bg-info p-2 mb-2 text-white rounded">.mb-2 (margin-bottom)</div>
+                    <div class="bg-warning p-3 mt-2 mb-2 text-dark rounded">.mt-2 .mb-2 (margin-top & bottom)</div>
+                    <div class="bg-danger p-4 m-3 text-white rounded">.m-3 (margin all sides)</div>
+                    <div class="bg-success p-2 px-4 py-3 text-white rounded">.px-4 .py-3 (padding x & y)</div>
+                </div>
+            </div>
+        </div>
+        <div class="row mb-4">
+            <div class="col-md-6 mb-3">
+                <h3 class="text-danger mb-3">Text & Colors</h3>
+                <div class="p-3 border rounded">
+                    <p class="text-primary fw-bold">.text-primary .fw-bold</p>
+                    <p class="text-muted fs-5">.text-muted .fs-5 (font size)</p>
+                    <p class="text-center text-uppercase bg-light p-2">.text-center .text-uppercase</p>
+                    <p class="text-end fst-italic">.text-end .fst-italic</p>
+                </div>
+            </div>
+            
+            <div class="col-md-6">
+                <h3 class="text-warning mb-3">Display & Flex</h3>
+                <div class="p-3 border rounded">
+                    <div class="d-flex justify-content-between mb-2">
+                        <span class="badge bg-primary">.d-flex</span>
+                        <span class="badge bg-success">.justify-content-between</span>
+                    </div>
+                    <div class="d-inline-block p-2 bg-info text-white">.d-inline-block</div>
+                    <div class="d-none d-md-block mt-2 p-2 bg-dark text-white">.d-none .d-md-block (visible on medium+)</div>
+                    <div class="d-flex align-items-center mt-3">
+                        <div class="me-2 p-2 bg-primary text-white">.me-2</div>
+                        <div class="mx-2 p-2 bg-success text-white">.mx-2</div>
+                        <div class="ms-auto p-2 bg-warning text-dark">.ms-auto</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mb-4">
+            <div class="col">
+                <h3 class="text-info mb-3">Borders & Shadows</h3>
+                <div class="d-flex flex-wrap gap-3">
+                    <div class="border p-3 rounded">.border .rounded</div>
+                    <div class="border border-primary p-3 rounded-pill">.border-primary .rounded-pill</div>
+                    <div class="border border-3 border-success p-3 shadow-sm">.border-3 .shadow-sm</div>
+                    <div class="border-top border-4 border-danger p-3 shadow">.border-top .shadow</div>
+                    <div class="border-start border-5 border-warning p-3 shadow-lg">.border-start .shadow-lg</div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col">
+                <h3 class="text-center text-purple mb-3"> Example: User Card</h3>
+                <div class="d-flex flex-column flex-md-row align-items-center p-4 border rounded shadow-sm custom-bg">
+                    <div class="me-md-4 mb-3 mb-md-0">
+                        <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center" 
+                             style="width: 100px; height: 100px;">
+                            <span class="fs-2">JS</span>
+                        </div>
+                    </div>
+                    <div class="flex-grow-1">
+                        <h4 class="fw-bold mb-1">John Smith</h4>
+                        <p class="text-muted mb-2">Web Developer</p>
+                        <p class="mb-3">Built this using only Bootstrap utility classes.</p>
+                        <div class="d-flex flex-wrap gap-2">
+                            <span class="badge bg-primary p-2">HTML</span>
+                            <span class="badge bg-success p-2">CSS</span>
+                            <span class="badge bg-warning p-2">JavaScript</span>
+                            <span class="badge bg-danger p-2">Bootstrap</span>
+                        </div>
+                    </div>
+                    <div class="mt-3 mt-md-0">
+                        <button class="btn btn-primary me-2">Message</button>
+                        <button class="btn btn-outline-secondary">Follow</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col">
+                <h3 class="text-center mb-4">Utilities Used</h3>
+                <div class="table-responsive">
+                    <table class="table table-bordered table-hover">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>Utility Type</th>
+                                <th>Classes Used</th>
+                                <th>What It Does</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Spacing</td>
+                                <td><code>.m-* .p-* .mt-* .mb-* .mx-* .my-*</code></td>
+                                <td>Margin and padding</td>
+                            </tr>
+                            <tr>
+                                <td>Text</td>
+                                <td><code>.text-* .fw-* .fs-* .text-center</code></td>
+                                <td>Text color, weight, size, alignment</td>
+                            </tr>
+                            <tr>
+                                <td>Display</td>
+                                <td><code>.d-* .d-flex .d-none</code></td>
+                                <td>Display properties</td>
+                            </tr>
+                            <tr>
+                                <td>Flex</td>
+                                <td><code>.justify-* .align-* .flex-*</code></td>
+                                <td>Flexbox utilities</td>
+                            </tr>
+                            <tr>
+                                <td>Borders</td>
+                                <td><code>.border .rounded .shadow</code></td>
+                                <td>Borders, rounding, shadows</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        
+        <footer class="text-center mt-5 pt-4 border-top">
+            <p class="text-muted">Exercise 7 - Only Bootstrap Utility Classes</p>
+            <p>
+                <span class="badge bg-primary">No Custom Spacing CSS</span>
+                <span class="badge bg-success">20+ Utilities Used</span>
+                <span class="badge bg-warning">Fully Responsive</span>
+            </p>
+        </footer>
+        
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        console.log("Utility Classes Demo Loaded");
+        console.log("Count of utility classes used: A LOT!");
+    </script>
+
+</body>
+</html>
